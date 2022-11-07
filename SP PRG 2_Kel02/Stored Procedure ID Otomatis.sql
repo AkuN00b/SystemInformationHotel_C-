@@ -1,0 +1,87 @@
+use SI_Hotel
+
+-- Fasilitas
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[sp_IDFasilitas]
+AS
+BEGIN 
+	SELECT TOP 1 id_fasilitas FROM Fasilitas ORDER BY id_fasilitas DESC
+END
+
+-- Ruangan
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[sp_IDRuangan]
+AS
+BEGIN 
+	SELECT TOP 1 id_ruangan FROM Ruangan ORDER BY id_ruangan DESC
+END
+-- Menu Makanan 
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[sp_IDMenu]
+AS
+BEGIN 
+	SELECT TOP 1 id_menu_makanan FROM Menu ORDER BY id_menu_makanan DESC
+END
+
+-- User
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[sp_IDUser]
+AS
+BEGIN 
+	SELECT TOP 1 id_user FROM [User] ORDER BY id_user DESC
+END
+
+use SI_Hotel
+
+-- Kamar
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[sp_IDKamar]
+AS
+BEGIN 
+	SELECT TOP 1 id_kamar FROM [Kamar] ORDER BY id_kamar DESC
+END
+
+-- Transaksi Kamar
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[sp_IDTransaksiKamar]
+AS
+BEGIN 
+	SELECT TOP 1 id_tr_kamar FROM TransaksiKamar ORDER BY id_tr_kamar DESC
+END
+
+-- Transaksi Pembelian
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[sp_IDTransaksiPembelian]
+AS
+BEGIN 
+	SELECT TOP 1 id_tr_dapur FROM TransaksiPembelian ORDER BY id_tr_dapur DESC
+END

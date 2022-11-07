@@ -36,6 +36,12 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\..\..\..\..\Users\LENOVO\Downloads\ProjectAkhir_Kel06-master\ProjectAkhir_Kel06-master\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -57,9 +63,15 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
@@ -68,6 +80,7 @@
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Management" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
@@ -80,6 +93,7 @@
     </Reference>
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -93,17 +107,97 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetKamarTahunan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetKamarTahunan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetMenuTahunan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMenuTahunan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetRuanganTahuinan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRuanganTahuinan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetRuanganTahunan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRuanganTahunan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DetailUser.cs">
+      <DependentUpon>ModelDGDetailUser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dsMenu.cs">
+      <DependentUpon>dsMenu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMenu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsRuangan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRuangan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsRuangann.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRuangann.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Fasilita.cs">
+      <DependentUpon>ModelDGFasilitas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerMenu.Designer.cs">
+      <DependentUpon>FormCustomerMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormManagerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManagerMenu.Designer.cs">
+      <DependentUpon>FormManagerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FormBeliMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FormBeliMenu.Designer.cs">
+      <DependentUpon>FormBeliMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormDetailFasilitasKamar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormDetailFasilitasKamar.Designer.cs">
       <DependentUpon>FormDetailFasilitasKamar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDetailUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDetailUser.Designer.cs">
+      <DependentUpon>FormDetailUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditPassword.Designer.cs">
+      <DependentUpon>FormEditPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditProfil.Designer.cs">
+      <DependentUpon>FormEditProfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormFasilitas.cs">
       <SubType>Form</SubType>
@@ -134,6 +228,12 @@
     </Compile>
     <Compile Include="Forms\FormMenuMakanan.Designer.cs">
       <DependentUpon>FormMenuMakanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormProfil.Designer.cs">
+      <DependentUpon>FormProfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormRole.cs">
       <SubType>Form</SubType>
@@ -177,6 +277,316 @@
     <Compile Include="Forms\FormKelasKamar.Designer.cs">
       <DependentUpon>FormKelasKamar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormUserMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUserMenu.Designer.cs">
+      <DependentUpon>FormUserMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\FormMenuReportTransaksiKamar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\FormMenuReportTransaksiKamar.Designer.cs">
+      <DependentUpon>FormMenuReportTransaksiKamar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\FormMenuReportTransaksiMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\FormMenuReportTransaksiMenu.Designer.cs">
+      <DependentUpon>FormMenuReportTransaksiMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\FormMenuReportTransaksiRuangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\FormMenuReportTransaksiRuangan.Designer.cs">
+      <DependentUpon>FormMenuReportTransaksiRuangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTahunanKamar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTahunanKamar.Designer.cs">
+      <DependentUpon>FormReportTahunanKamar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTahunanMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTahunanMenu.Designer.cs">
+      <DependentUpon>FormReportTahunanMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTahunanRuangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTahunanRuangan.Designer.cs">
+      <DependentUpon>FormReportTahunanRuangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTransaksiKamar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTransaksiKamar.Designer.cs">
+      <DependentUpon>FormReportTransaksiKamar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTransaksiMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTransaksiMenu.Designer.cs">
+      <DependentUpon>FormReportTransaksiMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTransaksiRuangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager\FormReportTransaksiRuangan.Designer.cs">
+      <DependentUpon>FormReportTransaksiRuangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDOtomatis.cs" />
+    <Compile Include="JenisKamar.cs">
+      <DependentUpon>ModelDGJenisKamar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JenisMenu.cs">
+      <DependentUpon>ModelDGJenisMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KelasKamar.cs">
+      <DependentUpon>ModelKelasKama.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoadDetailFasilitasKamar.cs">
+      <DependentUpon>ModelDGDetailFasilitas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoadKamar.cs">
+      <DependentUpon>ModelDGKamar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoadMenu.cs">
+      <DependentUpon>ModelDGMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoadRuangan.cs">
+      <DependentUpon>ModelDGRuangann.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoadUser.cs">
+      <DependentUpon>ModelDGUser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGDetailFasilitas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGDetailFasilitas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGDetailFasilitas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGDetailFasilitas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGDetailFasilitas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGDetailFasilitas.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGDetailUser.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGDetailUser.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGDetailUser.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGDetailUser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGDetailUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGDetailUser.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGFasilitas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGFasilitas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGFasilitas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGFasilitas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGFasilitas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGFasilitas.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGJenisKamar.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGJenisKamar.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGJenisKamar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGJenisKamar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGJenisKamar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGJenisKamar.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGJenisMenu.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGJenisMenu.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGJenisMenu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGJenisMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGJenisMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGJenisMenu.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGKamar.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGKamar.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGKamar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGKamar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGKamar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGKamar.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGMenu.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGMenu.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGMenu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGMenu.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGRole.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGRole.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGRole.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGRole.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGRole.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGRole.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGRuangan.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGRuangan.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGRuangan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGRuangan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGRuangan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGRuangan.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGRuangann.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGRuangann.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGRuangann.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGRuangann.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGRuangann.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGRuangann.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGUser.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGUser.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGUser.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGUser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDGUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDGUser.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelKelasKama.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelKelasKama.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelKelasKama.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelKelasKama.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelKelasKama.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelKelasKama.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelReportKamar.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReportKamar.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelReportKamar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReportKamar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelReportKamar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReportKamar.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelReportMenu.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReportMenu.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelReportMenu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReportMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelReportMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReportMenu.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelReportRuangan.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReportRuangan.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelReportRuangan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReportRuangan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelReportRuangan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReportRuangan.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormLogin.cs">
@@ -185,18 +595,116 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportKamar_Result.cs">
+      <DependentUpon>ModelReportKamar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMenu_Result.cs">
+      <DependentUpon>ModelReportMenu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportRuangan_Result.cs">
+      <DependentUpon>ModelReportRuangan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>ModelDGRole.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ruangan.cs">
+      <DependentUpon>ModelDGRuangan.tt</DependentUpon>
+    </Compile>
     <Compile Include="SIHotel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SIHotel.Designer.cs">
       <DependentUpon>SIHotel.cs</DependentUpon>
     </Compile>
+    <Compile Include="SI_HotelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SI_HotelDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SI_HotelDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FormCustomerMenu.resx">
+      <DependentUpon>FormCustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormManagerMenu.resx">
+      <DependentUpon>FormManagerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FormBeliMenu.resx">
+      <DependentUpon>FormBeliMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormDetailFasilitasKamar.resx">
       <DependentUpon>FormDetailFasilitasKamar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDetailUser.resx">
+      <DependentUpon>FormDetailUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditPassword.resx">
+      <DependentUpon>FormEditPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditProfil.resx">
+      <DependentUpon>FormEditProfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormFasilitas.resx">
       <DependentUpon>FormFasilitas.cs</DependentUpon>
@@ -216,6 +724,9 @@
     <EmbeddedResource Include="Forms\FormMenuMakanan.resx">
       <DependentUpon>FormMenuMakanan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormProfil.resx">
+      <DependentUpon>FormProfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormRole.resx">
       <DependentUpon>FormRole.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +745,36 @@
     <EmbeddedResource Include="Forms\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUserMenu.resx">
+      <DependentUpon>FormUserMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\FormMenuReportTransaksiKamar.resx">
+      <DependentUpon>FormMenuReportTransaksiKamar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\FormMenuReportTransaksiMenu.resx">
+      <DependentUpon>FormMenuReportTransaksiMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\FormMenuReportTransaksiRuangan.resx">
+      <DependentUpon>FormMenuReportTransaksiRuangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\FormReportTahunanKamar.resx">
+      <DependentUpon>FormReportTahunanKamar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\FormReportTahunanMenu.resx">
+      <DependentUpon>FormReportTahunanMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\FormReportTahunanRuangan.resx">
+      <DependentUpon>FormReportTahunanRuangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\FormReportTransaksiKamar.resx">
+      <DependentUpon>FormReportTransaksiKamar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\FormReportTransaksiMenu.resx">
+      <DependentUpon>FormReportTransaksiMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager\FormReportTransaksiRuangan.resx">
+      <DependentUpon>FormReportTransaksiRuangan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -247,10 +788,204 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportKamarTahunan.rdlc" />
+    <EmbeddedResource Include="ReportMenu.rdlc" />
+    <EmbeddedResource Include="ReportMenuTahunan.rdlc" />
+    <EmbeddedResource Include="ReportRuangan.rdlc" />
+    <EmbeddedResource Include="ReportRuangann.rdlc" />
+    <EmbeddedResource Include="ReportRuanganTahunan.rdlc" />
+    <EmbeddedResource Include="ReportTahunanRuangann.rdlc" />
+    <EmbeddedResource Include="ReportTransaksiKamar.rdlc" />
     <EmbeddedResource Include="SIHotel.resx">
       <DependentUpon>SIHotel.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="ModelReportKamar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelReportKamar.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataSetKamarTahunan.xsc">
+      <DependentUpon>DataSetKamarTahunan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetKamarTahunan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetKamarTahunan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetKamarTahunan.xss">
+      <DependentUpon>DataSetKamarTahunan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMenuTahunan.xsc">
+      <DependentUpon>DataSetMenuTahunan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMenuTahunan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMenuTahunan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetMenuTahunan.xss">
+      <DependentUpon>DataSetMenuTahunan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRuanganTahuinan.xsc">
+      <DependentUpon>DataSetRuanganTahuinan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRuanganTahuinan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRuanganTahuinan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetRuanganTahuinan.xss">
+      <DependentUpon>DataSetRuanganTahuinan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRuanganTahunan.xsc">
+      <DependentUpon>DataSetRuanganTahunan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRuanganTahunan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRuanganTahunan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetRuanganTahunan.xss">
+      <DependentUpon>DataSetRuanganTahunan.xsd</DependentUpon>
+    </None>
+    <None Include="dsMenu.xsc">
+      <DependentUpon>dsMenu.xsd</DependentUpon>
+    </None>
+    <None Include="dsMenu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMenu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsMenu.xss">
+      <DependentUpon>dsMenu.xsd</DependentUpon>
+    </None>
+    <None Include="dsRuangan.xsc">
+      <DependentUpon>dsRuangan.xsd</DependentUpon>
+    </None>
+    <None Include="dsRuangan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRuangan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsRuangan.xss">
+      <DependentUpon>dsRuangan.xsd</DependentUpon>
+    </None>
+    <None Include="dsRuangann.xsc">
+      <DependentUpon>dsRuangann.xsd</DependentUpon>
+    </None>
+    <None Include="dsRuangann.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRuangann.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsRuangann.xss">
+      <DependentUpon>dsRuangann.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelDGRole.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDGRole.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="ModelDGDetailUser.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDGDetailUser.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="ModelDGDetailFasilitas.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDGDetailFasilitas.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelDGDetailFasilitas.edmx.diagram">
+      <DependentUpon>ModelDGDetailFasilitas.edmx</DependentUpon>
+    </None>
+    <None Include="ModelDGDetailUser.edmx.diagram">
+      <DependentUpon>ModelDGDetailUser.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelDGKamar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDGKamar.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="ModelDGJenisKamar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDGJenisKamar.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="ModelDGFasilitas.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDGFasilitas.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelDGFasilitas.edmx.diagram">
+      <DependentUpon>ModelDGFasilitas.edmx</DependentUpon>
+    </None>
+    <None Include="ModelDGJenisKamar.edmx.diagram">
+      <DependentUpon>ModelDGJenisKamar.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelDGJenisMenu.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDGJenisMenu.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelDGJenisMenu.edmx.diagram">
+      <DependentUpon>ModelDGJenisMenu.edmx</DependentUpon>
+    </None>
+    <None Include="ModelDGKamar.edmx.diagram">
+      <DependentUpon>ModelDGKamar.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelDGMenu.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDGMenu.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelDGMenu.edmx.diagram">
+      <DependentUpon>ModelDGMenu.edmx</DependentUpon>
+    </None>
+    <None Include="ModelDGRole.edmx.diagram">
+      <DependentUpon>ModelDGRole.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelDGUser.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDGUser.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="ModelDGRuangan.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDGRuangan.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelDGRuangan.edmx.diagram">
+      <DependentUpon>ModelDGRuangan.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelDGRuangann.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelDGRuangann.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelDGRuangann.edmx.diagram">
+      <DependentUpon>ModelDGRuangann.edmx</DependentUpon>
+    </None>
+    <None Include="ModelDGUser.edmx.diagram">
+      <DependentUpon>ModelDGUser.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelKelasKama.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelKelasKama.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelKelasKama.edmx.diagram">
+      <DependentUpon>ModelKelasKama.edmx</DependentUpon>
+    </None>
+    <None Include="ModelReportKamar.edmx.diagram">
+      <DependentUpon>ModelReportKamar.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelReportMenu.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelReportMenu.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelReportMenu.edmx.diagram">
+      <DependentUpon>ModelReportMenu.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelReportRuangan.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelReportRuangan.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelReportRuangan.edmx.diagram">
+      <DependentUpon>ModelReportRuangan.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ReportKamar_Result.datasource" />
+    <None Include="Properties\DataSources\ReportMenu_Result.datasource" />
+    <None Include="Properties\DataSources\ReportRuangan_Result.datasource" />
+    <None Include="Properties\DataSources\sp_ReportKamar_Result.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -260,6 +995,149 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SI_HotelDataSet.xsc">
+      <DependentUpon>SI_HotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet.xss">
+      <DependentUpon>SI_HotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet1.xsc">
+      <DependentUpon>SI_HotelDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet1.xss">
+      <DependentUpon>SI_HotelDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet10.xsc">
+      <DependentUpon>SI_HotelDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet10.xss">
+      <DependentUpon>SI_HotelDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet11.xsc">
+      <DependentUpon>SI_HotelDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet11.xss">
+      <DependentUpon>SI_HotelDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet12.xsc">
+      <DependentUpon>SI_HotelDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet12.xss">
+      <DependentUpon>SI_HotelDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet2.xsc">
+      <DependentUpon>SI_HotelDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet2.xss">
+      <DependentUpon>SI_HotelDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet3.xsc">
+      <DependentUpon>SI_HotelDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet3.xss">
+      <DependentUpon>SI_HotelDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet4.xsc">
+      <DependentUpon>SI_HotelDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet4.xss">
+      <DependentUpon>SI_HotelDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet5.xsc">
+      <DependentUpon>SI_HotelDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet5.xss">
+      <DependentUpon>SI_HotelDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet6.xsc">
+      <DependentUpon>SI_HotelDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet6.xss">
+      <DependentUpon>SI_HotelDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet7.xsc">
+      <DependentUpon>SI_HotelDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet7.xss">
+      <DependentUpon>SI_HotelDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet8.xsc">
+      <DependentUpon>SI_HotelDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet8.xss">
+      <DependentUpon>SI_HotelDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet9.xsc">
+      <DependentUpon>SI_HotelDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="SI_HotelDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SI_HotelDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SI_HotelDataSet9.xss">
+      <DependentUpon>SI_HotelDataSet9.xsd</DependentUpon>
+    </None>
     <None Include="webfonts\fa-brands-400.eot" />
     <None Include="webfonts\fa-brands-400.ttf" />
     <None Include="webfonts\fa-brands-400.woff" />
@@ -293,6 +1171,156 @@
     <Content Include="Content\v4-shims.min.css" />
     <None Include="Resources\hotel-building-near-sea-seafront-resort-view-vector-illustration-flat-cartoon_101884-681-removebg-preview.png" />
     <None Include="Resources\hotel-png-21014.png" />
+    <Content Include="ModelDGDetailFasilitas.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGDetailFasilitas.edmx</DependentUpon>
+      <LastGenOutput>ModelDGDetailFasilitas.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGDetailFasilitas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGDetailFasilitas.edmx</DependentUpon>
+      <LastGenOutput>ModelDGDetailFasilitas.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGDetailUser.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGDetailUser.edmx</DependentUpon>
+      <LastGenOutput>ModelDGDetailUser.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGDetailUser.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGDetailUser.edmx</DependentUpon>
+      <LastGenOutput>ModelDGDetailUser.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGFasilitas.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGFasilitas.edmx</DependentUpon>
+      <LastGenOutput>ModelDGFasilitas.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGFasilitas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGFasilitas.edmx</DependentUpon>
+      <LastGenOutput>ModelDGFasilitas.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGJenisKamar.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGJenisKamar.edmx</DependentUpon>
+      <LastGenOutput>ModelDGJenisKamar.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGJenisKamar.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGJenisKamar.edmx</DependentUpon>
+      <LastGenOutput>ModelDGJenisKamar.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGJenisMenu.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGJenisMenu.edmx</DependentUpon>
+      <LastGenOutput>ModelDGJenisMenu.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGJenisMenu.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGJenisMenu.edmx</DependentUpon>
+      <LastGenOutput>ModelDGJenisMenu.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGKamar.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGKamar.edmx</DependentUpon>
+      <LastGenOutput>ModelDGKamar.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGKamar.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGKamar.edmx</DependentUpon>
+      <LastGenOutput>ModelDGKamar.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGMenu.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGMenu.edmx</DependentUpon>
+      <LastGenOutput>ModelDGMenu.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGMenu.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGMenu.edmx</DependentUpon>
+      <LastGenOutput>ModelDGMenu.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGRole.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGRole.edmx</DependentUpon>
+      <LastGenOutput>ModelDGRole.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGRole.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGRole.edmx</DependentUpon>
+      <LastGenOutput>ModelDGRole.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGRuangan.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGRuangan.edmx</DependentUpon>
+      <LastGenOutput>ModelDGRuangan.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGRuangan.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGRuangan.edmx</DependentUpon>
+      <LastGenOutput>ModelDGRuangan.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGRuangann.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGRuangann.edmx</DependentUpon>
+      <LastGenOutput>ModelDGRuangann.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGRuangann.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGRuangann.edmx</DependentUpon>
+      <LastGenOutput>ModelDGRuangann.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGUser.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGUser.edmx</DependentUpon>
+      <LastGenOutput>ModelDGUser.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelDGUser.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDGUser.edmx</DependentUpon>
+      <LastGenOutput>ModelDGUser.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelKelasKama.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelKelasKama.edmx</DependentUpon>
+      <LastGenOutput>ModelKelasKama.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelKelasKama.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelKelasKama.edmx</DependentUpon>
+      <LastGenOutput>ModelKelasKama.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelReportKamar.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelReportKamar.edmx</DependentUpon>
+      <LastGenOutput>ModelReportKamar.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelReportKamar.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelReportKamar.edmx</DependentUpon>
+      <LastGenOutput>ModelReportKamar.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelReportMenu.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelReportMenu.edmx</DependentUpon>
+      <LastGenOutput>ModelReportMenu.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelReportMenu.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelReportMenu.edmx</DependentUpon>
+      <LastGenOutput>ModelReportMenu.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelReportRuangan.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelReportRuangan.edmx</DependentUpon>
+      <LastGenOutput>ModelReportRuangan.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelReportRuangan.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelReportRuangan.edmx</DependentUpon>
+      <LastGenOutput>ModelReportRuangan.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />
     <Content Include="Scripts\fontawesome\brands.js" />
@@ -323,6 +1351,9 @@
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

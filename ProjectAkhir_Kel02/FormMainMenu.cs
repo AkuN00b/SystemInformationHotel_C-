@@ -23,13 +23,13 @@ namespace ProjectAkhir_Kel02
         private Panel leftBorderBtn;
         private Form currentChildForm;
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-
+        string[] user;
         // Constructor
-        public FormMainMenu()
+        public FormMainMenu(string[] data)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 60);
+            leftBorderBtn.Size = new Size(7, 45);
             PanelMenu.Controls.Add(leftBorderBtn);
 
             // Form
@@ -37,11 +37,37 @@ namespace ProjectAkhir_Kel02
             this.ControlBox = false;
             this.DoubleBuffered = true;
             WindowState = FormWindowState.Maximized;
+
+            labelUsername.Text = data[1];
+            labelRole.Text = data[4];
+
+            setUsernameText(data[1]);
+
+            user = data;
+        }
+
+        public void loadProfile()
+        {
+            DataTable st = new DataTable();
+            SqlCommand view = new SqlCommand("sp_LoginNow", con);
+            view.CommandType = CommandType.StoredProcedure;
+            view.Parameters.AddWithValue("id_user", user[0]);
+            SqlDataAdapter adapter = new SqlDataAdapter(view);
+            adapter.Fill(st);
+            con.Close();
+
+            user[1] = st.Rows[0][1].ToString();
+            labelUsername.Text = user[1];
         }
 
         private void bunifuCustomTextbox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void setUsernameText (string username)
+        {
+            labelUsername.Text = username;
         }
 
         // Structs
@@ -88,9 +114,9 @@ namespace ProjectAkhir_Kel02
             if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.FromArgb(111, 186, 255);
-                currentBtn.ForeColor = Color.Gainsboro;
+                currentBtn.ForeColor = Color.Black;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.Gainsboro;
+                currentBtn.IconColor = Color.MediumBlue;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
@@ -98,6 +124,8 @@ namespace ProjectAkhir_Kel02
 
         private void OpenChildForm(Form childForm)
         {
+            loadProfile();
+
             if (currentChildForm != null)
             {
                 // Open only form
@@ -119,14 +147,21 @@ namespace ProjectAkhir_Kel02
         private void btnRole_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            currentChildForm.Close();
-            labelTitleChildForm.Text = "Home";
+
+            if (labelTitleChildForm.Text != "Dashboard" && labelTitleChildForm.Text != "Home")
+            {
+                currentChildForm.Close();
+                labelTitleChildForm.Text = "Dashboard";
+            } else
+            {
+                labelTitleChildForm.Text = "Dashboard";
+            }
         }
 
         private void btnUser_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new FormUser());
+            OpenChildForm(new FormUserMenu());
         }
 
         private void btnRole_Click_1(object sender, EventArgs e)
@@ -137,8 +172,9 @@ namespace ProjectAkhir_Kel02
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
+            OpenChildForm(new FormProfil(user));
             Reset();
+            labelTitleChildForm.Text = "Profil";
         }
 
         private void Reset()
@@ -275,27 +311,52 @@ namespace ProjectAkhir_Kel02
         private void btnTransaksiKamar_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new FormTransaksiKamar());
+            OpenChildForm(new FormTransaksiKamar(user));
         }
 
         private void btnTransaksiPembelian_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new FormTransaksiPembelian());
+            OpenChildForm(new FormTransaksiPembelian(user));
         }
 
         private void btnTransaksiRuangan_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new FormTransaksiRuangan());
+            OpenChildForm(new FormTransaksiRuangan(user));
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        public void btnLogout_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Anda telah logout!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FormLogin fl = new FormLogin();
             this.Hide();
             fl.Show();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Anda telah logout!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormLogin fl = new FormLogin();
+            this.Hide();
+            fl.Show();
+        }
+
+        private void btnMinimized_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMaximized_Click_1(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
         }
     }
 }

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SI_HotelDataSet12" targetNamespace="http://tempuri.org/SI_HotelDataSet12.xsd" xmlns:mstns="http://tempuri.org/SI_HotelDataSet12.xsd" xmlns="http://tempuri.org/SI_HotelDataSet12.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SI_HotelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SI_HotelConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectAkhir_Kel02.Properties.Settings.GlobalReference.Default.SI_HotelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CBTahunGrafikTransaksiKamarTableAdapter" GeneratorDataComponentClassName="CBTahunGrafikTransaksiKamarTableAdapter" Name="CBTahunGrafikTransaksiKamar" UserDataComponentName="CBTahunGrafikTransaksiKamarTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SI_HotelConnectionString (Settings)" DbObjectName="SI_Hotel.dbo.CBTahunGrafikTransaksiKamar" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Year FROM dbo.CBTahunGrafikTransaksiKamar</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SI_HotelDataSet12" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SI_HotelDataSet12" msprop:Generator_UserDSName="SI_HotelDataSet12">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CBTahunGrafikTransaksiKamar" msprop:Generator_TableClassName="CBTahunGrafikTransaksiKamarDataTable" msprop:Generator_TableVarName="tableCBTahunGrafikTransaksiKamar" msprop:Generator_TablePropName="CBTahunGrafikTransaksiKamar" msprop:Generator_RowDeletingName="CBTahunGrafikTransaksiKamarRowDeleting" msprop:Generator_RowChangingName="CBTahunGrafikTransaksiKamarRowChanging" msprop:Generator_RowEvHandlerName="CBTahunGrafikTransaksiKamarRowChangeEventHandler" msprop:Generator_RowDeletedName="CBTahunGrafikTransaksiKamarRowDeleted" msprop:Generator_UserTableName="CBTahunGrafikTransaksiKamar" msprop:Generator_RowChangedName="CBTahunGrafikTransaksiKamarRowChanged" msprop:Generator_RowEvArgName="CBTahunGrafikTransaksiKamarRowChangeEvent" msprop:Generator_RowClassName="CBTahunGrafikTransaksiKamarRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

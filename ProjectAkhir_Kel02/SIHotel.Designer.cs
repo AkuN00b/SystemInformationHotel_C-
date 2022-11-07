@@ -52,10 +52,10 @@ namespace ProjectAkhir_Kel02
             this.progressBar.animated = false;
             this.progressBar.animationIterval = 5;
             this.progressBar.animationSpeed = 300;
-            this.progressBar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.progressBar.BackColor = System.Drawing.Color.Transparent;
             this.progressBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("progressBar.BackgroundImage")));
-            this.progressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.progressBar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.progressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.progressBar.ForeColor = System.Drawing.Color.Yellow;
             this.progressBar.LabelVisible = true;
             this.progressBar.LineProgressThickness = 8;
             this.progressBar.LineThickness = 5;
@@ -63,8 +63,8 @@ namespace ProjectAkhir_Kel02
             this.progressBar.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.progressBar.MaxValue = 100;
             this.progressBar.Name = "progressBar";
-            this.progressBar.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.progressBar.ProgressColor = System.Drawing.Color.SeaGreen;
+            this.progressBar.ProgressBackColor = System.Drawing.Color.Transparent;
+            this.progressBar.ProgressColor = System.Drawing.Color.Yellow;
             this.progressBar.Size = new System.Drawing.Size(134, 134);
             this.progressBar.TabIndex = 5;
             this.progressBar.Value = 100;

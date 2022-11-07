@@ -30,38 +30,37 @@ namespace ProjectAkhir_Kel02
         private void InitializeComponent()
         {
             this.PanelMenu = new System.Windows.Forms.Panel();
-            this.PanelLogo = new System.Windows.Forms.Panel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.labelTitleChildForm = new System.Windows.Forms.Label();
-            this.panelShadow = new System.Windows.Forms.Panel();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.btnMaximized = new FontAwesome.Sharp.IconPictureBox();
-            this.btnMinimize = new FontAwesome.Sharp.IconPictureBox();
-            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
+            this.btnTransaksiRuangan = new FontAwesome.Sharp.IconButton();
+            this.btnTransaksiPembelian = new FontAwesome.Sharp.IconButton();
+            this.btnTransaksiKamar = new FontAwesome.Sharp.IconButton();
+            this.btnRuangan = new FontAwesome.Sharp.IconButton();
+            this.btnJenisMakanan = new FontAwesome.Sharp.IconButton();
+            this.btnMenuMakanan = new FontAwesome.Sharp.IconButton();
+            this.btnDetailFasilitas = new FontAwesome.Sharp.IconButton();
+            this.btnFasilitas = new FontAwesome.Sharp.IconButton();
+            this.btnKelasKamar = new FontAwesome.Sharp.IconButton();
+            this.btnJenisKamar = new FontAwesome.Sharp.IconButton();
+            this.btnKamar = new FontAwesome.Sharp.IconButton();
             this.btnRole = new FontAwesome.Sharp.IconButton();
             this.btnUser = new FontAwesome.Sharp.IconButton();
             this.btnDashboard = new FontAwesome.Sharp.IconButton();
+            this.PanelLogo = new System.Windows.Forms.Panel();
+            this.labelRole = new System.Windows.Forms.Label();
+            this.labelUsername = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.PictureBox();
-            this.btnKamar = new FontAwesome.Sharp.IconButton();
-            this.btnJenisKamar = new FontAwesome.Sharp.IconButton();
-            this.btnKelasKamar = new FontAwesome.Sharp.IconButton();
-            this.btnFasilitas = new FontAwesome.Sharp.IconButton();
-            this.btnDetailFasilitas = new FontAwesome.Sharp.IconButton();
-            this.btnMenuMakanan = new FontAwesome.Sharp.IconButton();
-            this.btnJenisMakanan = new FontAwesome.Sharp.IconButton();
-            this.btnRuangan = new FontAwesome.Sharp.IconButton();
-            this.btnTransaksiKamar = new FontAwesome.Sharp.IconButton();
-            this.btnTransaksiPembelian = new FontAwesome.Sharp.IconButton();
-            this.btnTransaksiRuangan = new FontAwesome.Sharp.IconButton();
-            this.btnLogout = new FontAwesome.Sharp.IconPictureBox();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnMinimized = new FontAwesome.Sharp.IconButton();
+            this.btnMaximized = new FontAwesome.Sharp.IconButton();
+            this.btnLogout = new FontAwesome.Sharp.IconButton();
+            this.labelTitleChildForm = new System.Windows.Forms.Label();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
+            this.panelShadow = new System.Windows.Forms.Panel();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.PanelMenu.SuspendLayout();
             this.PanelLogo.SuspendLayout();
-            this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximized)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelMenu
@@ -89,107 +88,236 @@ namespace ProjectAkhir_Kel02
             this.PanelMenu.TabIndex = 0;
             this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
             // 
-            // PanelLogo
+            // btnTransaksiRuangan
             // 
-            this.PanelLogo.Controls.Add(this.btnHome);
-            this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelLogo.Location = new System.Drawing.Point(0, 0);
-            this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(220, 103);
-            this.PanelLogo.TabIndex = 0;
-            this.PanelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelLogo_Paint);
+            this.btnTransaksiRuangan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransaksiRuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaksiRuangan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransaksiRuangan.ForeColor = System.Drawing.Color.Black;
+            this.btnTransaksiRuangan.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
+            this.btnTransaksiRuangan.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnTransaksiRuangan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTransaksiRuangan.IconSize = 32;
+            this.btnTransaksiRuangan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransaksiRuangan.Location = new System.Drawing.Point(0, 688);
+            this.btnTransaksiRuangan.Name = "btnTransaksiRuangan";
+            this.btnTransaksiRuangan.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTransaksiRuangan.Size = new System.Drawing.Size(220, 45);
+            this.btnTransaksiRuangan.TabIndex = 15;
+            this.btnTransaksiRuangan.Text = "Transaksi Ruangan";
+            this.btnTransaksiRuangan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTransaksiRuangan.UseVisualStyleBackColor = true;
+            this.btnTransaksiRuangan.Click += new System.EventHandler(this.btnTransaksiRuangan_Click);
             // 
-            // panelTitleBar
+            // btnTransaksiPembelian
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.panelTitleBar.Controls.Add(this.btnLogout);
-            this.panelTitleBar.Controls.Add(this.btnMaximized);
-            this.panelTitleBar.Controls.Add(this.btnMinimize);
-            this.panelTitleBar.Controls.Add(this.labelTitleChildForm);
-            this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(860, 80);
-            this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
-            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            this.btnTransaksiPembelian.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransaksiPembelian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaksiPembelian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransaksiPembelian.ForeColor = System.Drawing.Color.Black;
+            this.btnTransaksiPembelian.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
+            this.btnTransaksiPembelian.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnTransaksiPembelian.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTransaksiPembelian.IconSize = 32;
+            this.btnTransaksiPembelian.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransaksiPembelian.Location = new System.Drawing.Point(0, 643);
+            this.btnTransaksiPembelian.Name = "btnTransaksiPembelian";
+            this.btnTransaksiPembelian.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTransaksiPembelian.Size = new System.Drawing.Size(220, 45);
+            this.btnTransaksiPembelian.TabIndex = 14;
+            this.btnTransaksiPembelian.Text = "Transaksi Pembelian";
+            this.btnTransaksiPembelian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTransaksiPembelian.UseVisualStyleBackColor = true;
+            this.btnTransaksiPembelian.Click += new System.EventHandler(this.btnTransaksiPembelian_Click);
             // 
-            // labelTitleChildForm
+            // btnTransaksiKamar
             // 
-            this.labelTitleChildForm.AutoSize = true;
-            this.labelTitleChildForm.ForeColor = System.Drawing.Color.White;
-            this.labelTitleChildForm.Location = new System.Drawing.Point(57, 34);
-            this.labelTitleChildForm.Name = "labelTitleChildForm";
-            this.labelTitleChildForm.Size = new System.Drawing.Size(35, 13);
-            this.labelTitleChildForm.TabIndex = 1;
-            this.labelTitleChildForm.Text = "Home";
-            this.labelTitleChildForm.Click += new System.EventHandler(this.labelTitleChildForm_Click);
+            this.btnTransaksiKamar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransaksiKamar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaksiKamar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransaksiKamar.ForeColor = System.Drawing.Color.Black;
+            this.btnTransaksiKamar.IconChar = FontAwesome.Sharp.IconChar.MoneyBillWaveAlt;
+            this.btnTransaksiKamar.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnTransaksiKamar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTransaksiKamar.IconSize = 32;
+            this.btnTransaksiKamar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransaksiKamar.Location = new System.Drawing.Point(0, 598);
+            this.btnTransaksiKamar.Name = "btnTransaksiKamar";
+            this.btnTransaksiKamar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTransaksiKamar.Size = new System.Drawing.Size(220, 45);
+            this.btnTransaksiKamar.TabIndex = 13;
+            this.btnTransaksiKamar.Text = "Transaksi Kamar";
+            this.btnTransaksiKamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTransaksiKamar.UseVisualStyleBackColor = true;
+            this.btnTransaksiKamar.Click += new System.EventHandler(this.btnTransaksiKamar_Click);
             // 
-            // panelShadow
+            // btnRuangan
             // 
-            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.Location = new System.Drawing.Point(220, 80);
-            this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(860, 9);
-            this.panelShadow.TabIndex = 2;
-            this.panelShadow.Paint += new System.Windows.Forms.PaintEventHandler(this.panelShadow_Paint);
+            this.btnRuangan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRuangan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRuangan.ForeColor = System.Drawing.Color.Black;
+            this.btnRuangan.IconChar = FontAwesome.Sharp.IconChar.PersonBooth;
+            this.btnRuangan.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnRuangan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRuangan.IconSize = 32;
+            this.btnRuangan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRuangan.Location = new System.Drawing.Point(0, 553);
+            this.btnRuangan.Name = "btnRuangan";
+            this.btnRuangan.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnRuangan.Size = new System.Drawing.Size(220, 45);
+            this.btnRuangan.TabIndex = 12;
+            this.btnRuangan.Text = "Ruangan";
+            this.btnRuangan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRuangan.UseVisualStyleBackColor = true;
+            this.btnRuangan.Click += new System.EventHandler(this.btnRuangan_Click);
             // 
-            // panelDesktop
+            // btnJenisMakanan
             // 
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(220, 89);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(860, 660);
-            this.panelDesktop.TabIndex = 3;
-            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            this.btnJenisMakanan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJenisMakanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJenisMakanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJenisMakanan.ForeColor = System.Drawing.Color.Black;
+            this.btnJenisMakanan.IconChar = FontAwesome.Sharp.IconChar.GlassWhiskey;
+            this.btnJenisMakanan.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnJenisMakanan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnJenisMakanan.IconSize = 32;
+            this.btnJenisMakanan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnJenisMakanan.Location = new System.Drawing.Point(0, 508);
+            this.btnJenisMakanan.Name = "btnJenisMakanan";
+            this.btnJenisMakanan.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnJenisMakanan.Size = new System.Drawing.Size(220, 45);
+            this.btnJenisMakanan.TabIndex = 11;
+            this.btnJenisMakanan.Text = "Jenis Menu";
+            this.btnJenisMakanan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnJenisMakanan.UseVisualStyleBackColor = true;
+            this.btnJenisMakanan.Click += new System.EventHandler(this.btnJenisMakanan_Click);
             // 
-            // btnMaximized
+            // btnMenuMakanan
             // 
-            this.btnMaximized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximized.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.btnMaximized.ForeColor = System.Drawing.Color.MediumBlue;
-            this.btnMaximized.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.btnMaximized.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnMaximized.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMaximized.IconSize = 27;
-            this.btnMaximized.Location = new System.Drawing.Point(796, -2);
-            this.btnMaximized.Name = "btnMaximized";
-            this.btnMaximized.Size = new System.Drawing.Size(27, 29);
-            this.btnMaximized.TabIndex = 4;
-            this.btnMaximized.TabStop = false;
-            this.btnMaximized.Click += new System.EventHandler(this.btnMaximized_Click);
+            this.btnMenuMakanan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuMakanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuMakanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuMakanan.ForeColor = System.Drawing.Color.Black;
+            this.btnMenuMakanan.IconChar = FontAwesome.Sharp.IconChar.Ring;
+            this.btnMenuMakanan.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnMenuMakanan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMenuMakanan.IconSize = 32;
+            this.btnMenuMakanan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuMakanan.Location = new System.Drawing.Point(0, 463);
+            this.btnMenuMakanan.Name = "btnMenuMakanan";
+            this.btnMenuMakanan.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnMenuMakanan.Size = new System.Drawing.Size(220, 45);
+            this.btnMenuMakanan.TabIndex = 10;
+            this.btnMenuMakanan.Text = "Menu Pembelian";
+            this.btnMenuMakanan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuMakanan.UseVisualStyleBackColor = true;
+            this.btnMenuMakanan.Click += new System.EventHandler(this.btnMenuMakanan_Click);
             // 
-            // btnMinimize
+            // btnDetailFasilitas
             // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.btnMinimize.ForeColor = System.Drawing.Color.MediumBlue;
-            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMinimize.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimize.IconSize = 27;
-            this.btnMinimize.Location = new System.Drawing.Point(763, -3);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(27, 27);
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnDetailFasilitas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDetailFasilitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetailFasilitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailFasilitas.ForeColor = System.Drawing.Color.Black;
+            this.btnDetailFasilitas.IconChar = FontAwesome.Sharp.IconChar.GripVertical;
+            this.btnDetailFasilitas.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnDetailFasilitas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDetailFasilitas.IconSize = 32;
+            this.btnDetailFasilitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetailFasilitas.Location = new System.Drawing.Point(0, 418);
+            this.btnDetailFasilitas.Name = "btnDetailFasilitas";
+            this.btnDetailFasilitas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnDetailFasilitas.Size = new System.Drawing.Size(220, 45);
+            this.btnDetailFasilitas.TabIndex = 9;
+            this.btnDetailFasilitas.Text = "Detail Fasilitas";
+            this.btnDetailFasilitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDetailFasilitas.UseVisualStyleBackColor = true;
+            this.btnDetailFasilitas.Click += new System.EventHandler(this.btnDetailFasilitas_Click);
             // 
-            // iconCurrentChildForm
+            // btnFasilitas
             // 
-            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.MediumBlue;
-            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumBlue;
-            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(19, 25);
-            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 32);
-            this.iconCurrentChildForm.TabIndex = 0;
-            this.iconCurrentChildForm.TabStop = false;
-            this.iconCurrentChildForm.Click += new System.EventHandler(this.iconCurrentChildForm_Click);
+            this.btnFasilitas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFasilitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFasilitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFasilitas.ForeColor = System.Drawing.Color.Black;
+            this.btnFasilitas.IconChar = FontAwesome.Sharp.IconChar.Guilded;
+            this.btnFasilitas.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnFasilitas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFasilitas.IconSize = 32;
+            this.btnFasilitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFasilitas.Location = new System.Drawing.Point(0, 373);
+            this.btnFasilitas.Name = "btnFasilitas";
+            this.btnFasilitas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnFasilitas.Size = new System.Drawing.Size(220, 45);
+            this.btnFasilitas.TabIndex = 8;
+            this.btnFasilitas.Text = "Fasilitas";
+            this.btnFasilitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFasilitas.UseVisualStyleBackColor = true;
+            this.btnFasilitas.Click += new System.EventHandler(this.btnFasilitas_Click);
+            // 
+            // btnKelasKamar
+            // 
+            this.btnKelasKamar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKelasKamar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKelasKamar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKelasKamar.ForeColor = System.Drawing.Color.Black;
+            this.btnKelasKamar.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.btnKelasKamar.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnKelasKamar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKelasKamar.IconSize = 32;
+            this.btnKelasKamar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKelasKamar.Location = new System.Drawing.Point(0, 328);
+            this.btnKelasKamar.Name = "btnKelasKamar";
+            this.btnKelasKamar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnKelasKamar.Size = new System.Drawing.Size(220, 45);
+            this.btnKelasKamar.TabIndex = 7;
+            this.btnKelasKamar.Text = "Kelas Kamar";
+            this.btnKelasKamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKelasKamar.UseVisualStyleBackColor = true;
+            this.btnKelasKamar.Click += new System.EventHandler(this.btnKelasKamar_Click);
+            // 
+            // btnJenisKamar
+            // 
+            this.btnJenisKamar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJenisKamar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJenisKamar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJenisKamar.ForeColor = System.Drawing.Color.Black;
+            this.btnJenisKamar.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
+            this.btnJenisKamar.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnJenisKamar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnJenisKamar.IconSize = 32;
+            this.btnJenisKamar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnJenisKamar.Location = new System.Drawing.Point(0, 283);
+            this.btnJenisKamar.Name = "btnJenisKamar";
+            this.btnJenisKamar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnJenisKamar.Size = new System.Drawing.Size(220, 45);
+            this.btnJenisKamar.TabIndex = 6;
+            this.btnJenisKamar.Text = "Jenis Kamar";
+            this.btnJenisKamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnJenisKamar.UseVisualStyleBackColor = true;
+            this.btnJenisKamar.Click += new System.EventHandler(this.btnJenisKamar_Click);
+            // 
+            // btnKamar
+            // 
+            this.btnKamar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKamar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKamar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKamar.ForeColor = System.Drawing.Color.Black;
+            this.btnKamar.IconChar = FontAwesome.Sharp.IconChar.Simplybuilt;
+            this.btnKamar.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnKamar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKamar.IconSize = 32;
+            this.btnKamar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKamar.Location = new System.Drawing.Point(0, 238);
+            this.btnKamar.Name = "btnKamar";
+            this.btnKamar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnKamar.Size = new System.Drawing.Size(220, 45);
+            this.btnKamar.TabIndex = 5;
+            this.btnKamar.Text = "Kamar";
+            this.btnKamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKamar.UseVisualStyleBackColor = true;
+            this.btnKamar.Click += new System.EventHandler(this.btnKamar_Click);
             // 
             // btnRole
             // 
@@ -254,11 +382,43 @@ namespace ProjectAkhir_Kel02
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnRole_Click);
             // 
+            // PanelLogo
+            // 
+            this.PanelLogo.Controls.Add(this.labelRole);
+            this.PanelLogo.Controls.Add(this.labelUsername);
+            this.PanelLogo.Controls.Add(this.btnHome);
+            this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelLogo.Location = new System.Drawing.Point(0, 0);
+            this.PanelLogo.Name = "PanelLogo";
+            this.PanelLogo.Size = new System.Drawing.Size(220, 103);
+            this.PanelLogo.TabIndex = 0;
+            this.PanelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelLogo_Paint);
+            // 
+            // labelRole
+            // 
+            this.labelRole.AutoSize = true;
+            this.labelRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRole.Location = new System.Drawing.Point(118, 52);
+            this.labelRole.Name = "labelRole";
+            this.labelRole.Size = new System.Drawing.Size(51, 16);
+            this.labelRole.TabIndex = 11;
+            this.labelRole.Text = "label1";
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(118, 19);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(51, 16);
+            this.labelUsername.TabIndex = 10;
+            this.labelUsername.Text = "label1";
+            // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
             this.btnHome.Image = global::ProjectAkhir_Kel02.Properties.Resources.hotel_building_near_sea_seafront_resort_view_vector_illustration_flat_cartoon_101884_681_removebg_preview;
-            this.btnHome.Location = new System.Drawing.Point(-31, -11);
+            this.btnHome.Location = new System.Drawing.Point(-81, -11);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(273, 133);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -266,251 +426,122 @@ namespace ProjectAkhir_Kel02
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnKamar
+            // panelTitleBar
             // 
-            this.btnKamar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKamar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKamar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKamar.ForeColor = System.Drawing.Color.Black;
-            this.btnKamar.IconChar = FontAwesome.Sharp.IconChar.GrinTongue;
-            this.btnKamar.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnKamar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKamar.IconSize = 32;
-            this.btnKamar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKamar.Location = new System.Drawing.Point(0, 238);
-            this.btnKamar.Name = "btnKamar";
-            this.btnKamar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnKamar.Size = new System.Drawing.Size(220, 45);
-            this.btnKamar.TabIndex = 5;
-            this.btnKamar.Text = "Kamar";
-            this.btnKamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKamar.UseVisualStyleBackColor = true;
-            this.btnKamar.Click += new System.EventHandler(this.btnKamar_Click);
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.panelTitleBar.Controls.Add(this.btnMinimized);
+            this.panelTitleBar.Controls.Add(this.btnMaximized);
+            this.panelTitleBar.Controls.Add(this.btnLogout);
+            this.panelTitleBar.Controls.Add(this.labelTitleChildForm);
+            this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(860, 80);
+            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
-            // btnJenisKamar
+            // btnMinimized
             // 
-            this.btnJenisKamar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnJenisKamar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJenisKamar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJenisKamar.ForeColor = System.Drawing.Color.Black;
-            this.btnJenisKamar.IconChar = FontAwesome.Sharp.IconChar.GrinTongue;
-            this.btnJenisKamar.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnJenisKamar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnJenisKamar.IconSize = 32;
-            this.btnJenisKamar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnJenisKamar.Location = new System.Drawing.Point(0, 283);
-            this.btnJenisKamar.Name = "btnJenisKamar";
-            this.btnJenisKamar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnJenisKamar.Size = new System.Drawing.Size(220, 45);
-            this.btnJenisKamar.TabIndex = 6;
-            this.btnJenisKamar.Text = "Jenis Kamar";
-            this.btnJenisKamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnJenisKamar.UseVisualStyleBackColor = true;
-            this.btnJenisKamar.Click += new System.EventHandler(this.btnJenisKamar_Click);
+            this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimized.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.btnMinimized.FlatAppearance.BorderSize = 0;
+            this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimized.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.btnMinimized.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMinimized.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnMinimized.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimized.IconSize = 23;
+            this.btnMinimized.Location = new System.Drawing.Point(757, -12);
+            this.btnMinimized.Name = "btnMinimized";
+            this.btnMinimized.Size = new System.Drawing.Size(39, 44);
+            this.btnMinimized.TabIndex = 9;
+            this.btnMinimized.UseVisualStyleBackColor = false;
+            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
             // 
-            // btnKelasKamar
+            // btnMaximized
             // 
-            this.btnKelasKamar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKelasKamar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKelasKamar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKelasKamar.ForeColor = System.Drawing.Color.Black;
-            this.btnKelasKamar.IconChar = FontAwesome.Sharp.IconChar.GrinTongue;
-            this.btnKelasKamar.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnKelasKamar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKelasKamar.IconSize = 32;
-            this.btnKelasKamar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKelasKamar.Location = new System.Drawing.Point(0, 328);
-            this.btnKelasKamar.Name = "btnKelasKamar";
-            this.btnKelasKamar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnKelasKamar.Size = new System.Drawing.Size(220, 45);
-            this.btnKelasKamar.TabIndex = 7;
-            this.btnKelasKamar.Text = "Kelas Kamar";
-            this.btnKelasKamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKelasKamar.UseVisualStyleBackColor = true;
-            this.btnKelasKamar.Click += new System.EventHandler(this.btnKelasKamar_Click);
-            // 
-            // btnFasilitas
-            // 
-            this.btnFasilitas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFasilitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFasilitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFasilitas.ForeColor = System.Drawing.Color.Black;
-            this.btnFasilitas.IconChar = FontAwesome.Sharp.IconChar.GrinTongue;
-            this.btnFasilitas.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnFasilitas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFasilitas.IconSize = 32;
-            this.btnFasilitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFasilitas.Location = new System.Drawing.Point(0, 373);
-            this.btnFasilitas.Name = "btnFasilitas";
-            this.btnFasilitas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnFasilitas.Size = new System.Drawing.Size(220, 45);
-            this.btnFasilitas.TabIndex = 8;
-            this.btnFasilitas.Text = "Fasilitas";
-            this.btnFasilitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFasilitas.UseVisualStyleBackColor = true;
-            this.btnFasilitas.Click += new System.EventHandler(this.btnFasilitas_Click);
-            // 
-            // btnDetailFasilitas
-            // 
-            this.btnDetailFasilitas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDetailFasilitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetailFasilitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetailFasilitas.ForeColor = System.Drawing.Color.Black;
-            this.btnDetailFasilitas.IconChar = FontAwesome.Sharp.IconChar.GrinTongue;
-            this.btnDetailFasilitas.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnDetailFasilitas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDetailFasilitas.IconSize = 32;
-            this.btnDetailFasilitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetailFasilitas.Location = new System.Drawing.Point(0, 418);
-            this.btnDetailFasilitas.Name = "btnDetailFasilitas";
-            this.btnDetailFasilitas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnDetailFasilitas.Size = new System.Drawing.Size(220, 45);
-            this.btnDetailFasilitas.TabIndex = 9;
-            this.btnDetailFasilitas.Text = "Detail Fasilitas";
-            this.btnDetailFasilitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDetailFasilitas.UseVisualStyleBackColor = true;
-            this.btnDetailFasilitas.Click += new System.EventHandler(this.btnDetailFasilitas_Click);
-            // 
-            // btnMenuMakanan
-            // 
-            this.btnMenuMakanan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenuMakanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuMakanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuMakanan.ForeColor = System.Drawing.Color.Black;
-            this.btnMenuMakanan.IconChar = FontAwesome.Sharp.IconChar.GrinTongue;
-            this.btnMenuMakanan.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnMenuMakanan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMenuMakanan.IconSize = 32;
-            this.btnMenuMakanan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuMakanan.Location = new System.Drawing.Point(0, 463);
-            this.btnMenuMakanan.Name = "btnMenuMakanan";
-            this.btnMenuMakanan.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnMenuMakanan.Size = new System.Drawing.Size(220, 45);
-            this.btnMenuMakanan.TabIndex = 10;
-            this.btnMenuMakanan.Text = "Menu Makanan";
-            this.btnMenuMakanan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMenuMakanan.UseVisualStyleBackColor = true;
-            this.btnMenuMakanan.Click += new System.EventHandler(this.btnMenuMakanan_Click);
-            // 
-            // btnJenisMakanan
-            // 
-            this.btnJenisMakanan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnJenisMakanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJenisMakanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJenisMakanan.ForeColor = System.Drawing.Color.Black;
-            this.btnJenisMakanan.IconChar = FontAwesome.Sharp.IconChar.GrinTongue;
-            this.btnJenisMakanan.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnJenisMakanan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnJenisMakanan.IconSize = 32;
-            this.btnJenisMakanan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnJenisMakanan.Location = new System.Drawing.Point(0, 508);
-            this.btnJenisMakanan.Name = "btnJenisMakanan";
-            this.btnJenisMakanan.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnJenisMakanan.Size = new System.Drawing.Size(220, 45);
-            this.btnJenisMakanan.TabIndex = 11;
-            this.btnJenisMakanan.Text = "Jenis Makanan";
-            this.btnJenisMakanan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnJenisMakanan.UseVisualStyleBackColor = true;
-            this.btnJenisMakanan.Click += new System.EventHandler(this.btnJenisMakanan_Click);
-            // 
-            // btnRuangan
-            // 
-            this.btnRuangan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRuangan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRuangan.ForeColor = System.Drawing.Color.Black;
-            this.btnRuangan.IconChar = FontAwesome.Sharp.IconChar.GrinTongue;
-            this.btnRuangan.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnRuangan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRuangan.IconSize = 32;
-            this.btnRuangan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRuangan.Location = new System.Drawing.Point(0, 553);
-            this.btnRuangan.Name = "btnRuangan";
-            this.btnRuangan.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnRuangan.Size = new System.Drawing.Size(220, 45);
-            this.btnRuangan.TabIndex = 12;
-            this.btnRuangan.Text = "Ruangan";
-            this.btnRuangan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRuangan.UseVisualStyleBackColor = true;
-            this.btnRuangan.Click += new System.EventHandler(this.btnRuangan_Click);
-            // 
-            // btnTransaksiKamar
-            // 
-            this.btnTransaksiKamar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTransaksiKamar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransaksiKamar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransaksiKamar.ForeColor = System.Drawing.Color.Black;
-            this.btnTransaksiKamar.IconChar = FontAwesome.Sharp.IconChar.GrinTongue;
-            this.btnTransaksiKamar.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnTransaksiKamar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTransaksiKamar.IconSize = 32;
-            this.btnTransaksiKamar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaksiKamar.Location = new System.Drawing.Point(0, 598);
-            this.btnTransaksiKamar.Name = "btnTransaksiKamar";
-            this.btnTransaksiKamar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnTransaksiKamar.Size = new System.Drawing.Size(220, 45);
-            this.btnTransaksiKamar.TabIndex = 13;
-            this.btnTransaksiKamar.Text = "Transaksi Kamar";
-            this.btnTransaksiKamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTransaksiKamar.UseVisualStyleBackColor = true;
-            this.btnTransaksiKamar.Click += new System.EventHandler(this.btnTransaksiKamar_Click);
-            // 
-            // btnTransaksiPembelian
-            // 
-            this.btnTransaksiPembelian.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTransaksiPembelian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransaksiPembelian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransaksiPembelian.ForeColor = System.Drawing.Color.Black;
-            this.btnTransaksiPembelian.IconChar = FontAwesome.Sharp.IconChar.GrinTongue;
-            this.btnTransaksiPembelian.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnTransaksiPembelian.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTransaksiPembelian.IconSize = 32;
-            this.btnTransaksiPembelian.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaksiPembelian.Location = new System.Drawing.Point(0, 643);
-            this.btnTransaksiPembelian.Name = "btnTransaksiPembelian";
-            this.btnTransaksiPembelian.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnTransaksiPembelian.Size = new System.Drawing.Size(220, 45);
-            this.btnTransaksiPembelian.TabIndex = 14;
-            this.btnTransaksiPembelian.Text = "Transaksi Pembelian";
-            this.btnTransaksiPembelian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTransaksiPembelian.UseVisualStyleBackColor = true;
-            this.btnTransaksiPembelian.Click += new System.EventHandler(this.btnTransaksiPembelian_Click);
-            // 
-            // btnTransaksiRuangan
-            // 
-            this.btnTransaksiRuangan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTransaksiRuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransaksiRuangan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransaksiRuangan.ForeColor = System.Drawing.Color.Black;
-            this.btnTransaksiRuangan.IconChar = FontAwesome.Sharp.IconChar.GrinTongue;
-            this.btnTransaksiRuangan.IconColor = System.Drawing.Color.MediumBlue;
-            this.btnTransaksiRuangan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTransaksiRuangan.IconSize = 32;
-            this.btnTransaksiRuangan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaksiRuangan.Location = new System.Drawing.Point(0, 688);
-            this.btnTransaksiRuangan.Name = "btnTransaksiRuangan";
-            this.btnTransaksiRuangan.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnTransaksiRuangan.Size = new System.Drawing.Size(220, 45);
-            this.btnTransaksiRuangan.TabIndex = 15;
-            this.btnTransaksiRuangan.Text = "Transaksi Ruangan";
-            this.btnTransaksiRuangan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTransaksiRuangan.UseVisualStyleBackColor = true;
-            this.btnTransaksiRuangan.Click += new System.EventHandler(this.btnTransaksiRuangan_Click);
+            this.btnMaximized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximized.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.btnMaximized.FlatAppearance.BorderSize = 0;
+            this.btnMaximized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximized.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.btnMaximized.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.btnMaximized.IconColor = System.Drawing.Color.MediumBlue;
+            this.btnMaximized.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMaximized.IconSize = 23;
+            this.btnMaximized.Location = new System.Drawing.Point(789, -11);
+            this.btnMaximized.Name = "btnMaximized";
+            this.btnMaximized.Size = new System.Drawing.Size(39, 44);
+            this.btnMaximized.TabIndex = 8;
+            this.btnMaximized.UseVisualStyleBackColor = false;
+            this.btnMaximized.Click += new System.EventHandler(this.btnMaximized_Click_1);
             // 
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.btnLogout.ForeColor = System.Drawing.Color.MediumBlue;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.btnLogout.IconColor = System.Drawing.Color.MediumBlue;
             this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLogout.Location = new System.Drawing.Point(816, 36);
+            this.btnLogout.IconSize = 30;
+            this.btnLogout.Location = new System.Drawing.Point(809, 30);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(32, 32);
-            this.btnLogout.TabIndex = 6;
-            this.btnLogout.TabStop = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnLogout.Size = new System.Drawing.Size(39, 44);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // labelTitleChildForm
+            // 
+            this.labelTitleChildForm.AutoSize = true;
+            this.labelTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleChildForm.ForeColor = System.Drawing.Color.Black;
+            this.labelTitleChildForm.Location = new System.Drawing.Point(67, 30);
+            this.labelTitleChildForm.Name = "labelTitleChildForm";
+            this.labelTitleChildForm.Size = new System.Drawing.Size(56, 20);
+            this.labelTitleChildForm.TabIndex = 1;
+            this.labelTitleChildForm.Text = "Home";
+            this.labelTitleChildForm.Click += new System.EventHandler(this.labelTitleChildForm_Click);
+            // 
+            // iconCurrentChildForm
+            // 
+            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.MediumBlue;
+            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumBlue;
+            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm.IconSize = 42;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(19, 21);
+            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(42, 43);
+            this.iconCurrentChildForm.TabIndex = 0;
+            this.iconCurrentChildForm.TabStop = false;
+            this.iconCurrentChildForm.Click += new System.EventHandler(this.iconCurrentChildForm_Click);
+            // 
+            // panelShadow
+            // 
+            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadow.Location = new System.Drawing.Point(220, 80);
+            this.panelShadow.Name = "panelShadow";
+            this.panelShadow.Size = new System.Drawing.Size(860, 9);
+            this.panelShadow.TabIndex = 2;
+            this.panelShadow.Paint += new System.Windows.Forms.PaintEventHandler(this.panelShadow_Paint);
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelDesktop.Location = new System.Drawing.Point(220, 89);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(860, 660);
+            this.panelDesktop.TabIndex = 3;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // FormMainMenu
             // 
@@ -526,13 +557,11 @@ namespace ProjectAkhir_Kel02
             this.Text = "Form1";
             this.PanelMenu.ResumeLayout(false);
             this.PanelLogo.ResumeLayout(false);
+            this.PanelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximized)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,8 +579,6 @@ namespace ProjectAkhir_Kel02
         private System.Windows.Forms.Label labelTitleChildForm;
         private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Panel panelDesktop;
-        private FontAwesome.Sharp.IconPictureBox btnMaximized;
-        private FontAwesome.Sharp.IconPictureBox btnMinimize;
         private FontAwesome.Sharp.IconButton btnJenisMakanan;
         private FontAwesome.Sharp.IconButton btnMenuMakanan;
         private FontAwesome.Sharp.IconButton btnDetailFasilitas;
@@ -563,7 +590,11 @@ namespace ProjectAkhir_Kel02
         private FontAwesome.Sharp.IconButton btnTransaksiPembelian;
         private FontAwesome.Sharp.IconButton btnTransaksiKamar;
         private FontAwesome.Sharp.IconButton btnRuangan;
-        private FontAwesome.Sharp.IconPictureBox btnLogout;
+        private FontAwesome.Sharp.IconButton btnLogout;
+        private FontAwesome.Sharp.IconButton btnMinimized;
+        private FontAwesome.Sharp.IconButton btnMaximized;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Label labelRole;
     }
 }
 

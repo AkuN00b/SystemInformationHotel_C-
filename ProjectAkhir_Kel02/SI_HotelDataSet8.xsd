@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SI_HotelDataSet8" targetNamespace="http://tempuri.org/SI_HotelDataSet8.xsd" xmlns:mstns="http://tempuri.org/SI_HotelDataSet8.xsd" xmlns="http://tempuri.org/SI_HotelDataSet8.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SI_HotelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SI_HotelConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectAkhir_Kel02.Properties.Settings.GlobalReference.Default.SI_HotelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LaporanTransaksiRuanganTableAdapter" GeneratorDataComponentClassName="LaporanTransaksiRuanganTableAdapter" Name="LaporanTransaksiRuangan" UserDataComponentName="LaporanTransaksiRuanganTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SI_HotelConnectionString (Settings)" DbObjectName="SI_Hotel.dbo.LaporanTransaksiRuangan" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_tr_ruangan, NamaCustomer, NamaResepsionis, id_ruangan, nama_ruangan, tgl_transaksi, checkin, checkout, total_harga, status FROM dbo.LaporanTransaksiRuangan</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_tr_ruangan" DataSetColumn="id_tr_ruangan" />
+              <Mapping SourceColumn="NamaCustomer" DataSetColumn="NamaCustomer" />
+              <Mapping SourceColumn="NamaResepsionis" DataSetColumn="NamaResepsionis" />
+              <Mapping SourceColumn="id_ruangan" DataSetColumn="id_ruangan" />
+              <Mapping SourceColumn="nama_ruangan" DataSetColumn="nama_ruangan" />
+              <Mapping SourceColumn="tgl_transaksi" DataSetColumn="tgl_transaksi" />
+              <Mapping SourceColumn="checkin" DataSetColumn="checkin" />
+              <Mapping SourceColumn="checkout" DataSetColumn="checkout" />
+              <Mapping SourceColumn="total_harga" DataSetColumn="total_harga" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SI_HotelDataSet8" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SI_HotelDataSet8" msprop:Generator_UserDSName="SI_HotelDataSet8">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LaporanTransaksiRuangan" msprop:Generator_TableClassName="LaporanTransaksiRuanganDataTable" msprop:Generator_TableVarName="tableLaporanTransaksiRuangan" msprop:Generator_TablePropName="LaporanTransaksiRuangan" msprop:Generator_RowDeletingName="LaporanTransaksiRuanganRowDeleting" msprop:Generator_RowChangingName="LaporanTransaksiRuanganRowChanging" msprop:Generator_RowEvHandlerName="LaporanTransaksiRuanganRowChangeEventHandler" msprop:Generator_RowDeletedName="LaporanTransaksiRuanganRowDeleted" msprop:Generator_UserTableName="LaporanTransaksiRuangan" msprop:Generator_RowChangedName="LaporanTransaksiRuanganRowChanged" msprop:Generator_RowEvArgName="LaporanTransaksiRuanganRowChangeEvent" msprop:Generator_RowClassName="LaporanTransaksiRuanganRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_tr_ruangan" msprop:Generator_ColumnVarNameInTable="columnid_tr_ruangan" msprop:Generator_ColumnPropNameInRow="id_tr_ruangan" msprop:Generator_ColumnPropNameInTable="id_tr_ruanganColumn" msprop:Generator_UserColumnName="id_tr_ruangan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NamaCustomer" msprop:Generator_ColumnVarNameInTable="columnNamaCustomer" msprop:Generator_ColumnPropNameInRow="NamaCustomer" msprop:Generator_ColumnPropNameInTable="NamaCustomerColumn" msprop:Generator_UserColumnName="NamaCustomer">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NamaResepsionis" msprop:Generator_ColumnVarNameInTable="columnNamaResepsionis" msprop:Generator_ColumnPropNameInRow="NamaResepsionis" msprop:Generator_ColumnPropNameInTable="NamaResepsionisColumn" msprop:Generator_UserColumnName="NamaResepsionis">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_ruangan" msprop:Generator_ColumnVarNameInTable="columnid_ruangan" msprop:Generator_ColumnPropNameInRow="id_ruangan" msprop:Generator_ColumnPropNameInTable="id_ruanganColumn" msprop:Generator_UserColumnName="id_ruangan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_ruangan" msprop:Generator_ColumnVarNameInTable="columnnama_ruangan" msprop:Generator_ColumnPropNameInRow="nama_ruangan" msprop:Generator_ColumnPropNameInTable="nama_ruanganColumn" msprop:Generator_UserColumnName="nama_ruangan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tgl_transaksi" msprop:Generator_ColumnVarNameInTable="columntgl_transaksi" msprop:Generator_ColumnPropNameInRow="tgl_transaksi" msprop:Generator_ColumnPropNameInTable="tgl_transaksiColumn" msprop:Generator_UserColumnName="tgl_transaksi" type="xs:dateTime" />
+              <xs:element name="checkin" msprop:Generator_ColumnVarNameInTable="columncheckin" msprop:Generator_ColumnPropNameInRow="checkin" msprop:Generator_ColumnPropNameInTable="checkinColumn" msprop:Generator_UserColumnName="checkin" type="xs:dateTime" />
+              <xs:element name="checkout" msprop:Generator_ColumnVarNameInTable="columncheckout" msprop:Generator_ColumnPropNameInRow="checkout" msprop:Generator_ColumnPropNameInTable="checkoutColumn" msprop:Generator_UserColumnName="checkout" type="xs:dateTime" />
+              <xs:element name="total_harga" msprop:Generator_ColumnVarNameInTable="columntotal_harga" msprop:Generator_ColumnPropNameInRow="total_harga" msprop:Generator_ColumnPropNameInTable="total_hargaColumn" msprop:Generator_UserColumnName="total_harga" type="xs:decimal" />
+              <xs:element name="status" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LaporanTransaksiRuangan" />
+      <xs:field xpath="mstns:id_tr_ruangan" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

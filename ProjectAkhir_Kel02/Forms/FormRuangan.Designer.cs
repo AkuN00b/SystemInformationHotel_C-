@@ -32,8 +32,8 @@ namespace ProjectAkhir_Kel02.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRuangan));
-            this.tbHargaRuangan = new ns1.BunifuMaterialTextbox();
-            this.tbDeskripsiRuangan = new ns1.BunifuMetroTextbox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.tbSearch = new ns1.BunifuMaterialTextbox();
             this.dsRuangan = new ns1.BunifuCustomDataGrid();
@@ -43,53 +43,28 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnBatal = new ns1.BunifuFlatButton();
             this.btnHapus = new ns1.BunifuFlatButton();
             this.btnSimpan = new ns1.BunifuFlatButton();
+            this.tbNamaRuangan = new ns1.BunifuMaterialTextbox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbHargaRuangan = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPageNumber = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.cobaDGRuangan = new ns1.BunifuCustomDataGrid();
             ((System.ComponentModel.ISupportInitialize)(this.dsRuangan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cobaDGRuangan)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tbHargaRuangan
-            // 
-            this.tbHargaRuangan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbHargaRuangan.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.tbHargaRuangan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbHargaRuangan.HintForeColor = System.Drawing.Color.Empty;
-            this.tbHargaRuangan.HintText = "";
-            this.tbHargaRuangan.isPassword = false;
-            this.tbHargaRuangan.LineFocusedColor = System.Drawing.Color.Blue;
-            this.tbHargaRuangan.LineIdleColor = System.Drawing.Color.Gray;
-            this.tbHargaRuangan.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.tbHargaRuangan.LineThickness = 3;
-            this.tbHargaRuangan.Location = new System.Drawing.Point(36, 278);
-            this.tbHargaRuangan.Margin = new System.Windows.Forms.Padding(4);
-            this.tbHargaRuangan.Name = "tbHargaRuangan";
-            this.tbHargaRuangan.Size = new System.Drawing.Size(315, 27);
-            this.tbHargaRuangan.TabIndex = 181;
-            this.tbHargaRuangan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // tbDeskripsiRuangan
-            // 
-            this.tbDeskripsiRuangan.BorderColorFocused = System.Drawing.Color.Blue;
-            this.tbDeskripsiRuangan.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbDeskripsiRuangan.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.tbDeskripsiRuangan.BorderThickness = 3;
-            this.tbDeskripsiRuangan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbDeskripsiRuangan.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.tbDeskripsiRuangan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbDeskripsiRuangan.isPassword = false;
-            this.tbDeskripsiRuangan.Location = new System.Drawing.Point(35, 86);
-            this.tbDeskripsiRuangan.Margin = new System.Windows.Forms.Padding(4);
-            this.tbDeskripsiRuangan.Name = "tbDeskripsiRuangan";
-            this.tbDeskripsiRuangan.Size = new System.Drawing.Size(315, 147);
-            this.tbDeskripsiRuangan.TabIndex = 179;
-            this.tbDeskripsiRuangan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(32, 251);
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(31, 140);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(123, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(136, 20);
             this.bunifuCustomLabel1.TabIndex = 177;
             this.bunifuCustomLabel1.Text = "Harga Ruangan";
             // 
@@ -99,7 +74,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.tbSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.tbSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbSearch.HintForeColor = System.Drawing.Color.Empty;
-            this.tbSearch.HintText = "";
+            this.tbSearch.HintText = "Masukkan Kata Kunci";
             this.tbSearch.isPassword = false;
             this.tbSearch.LineFocusedColor = System.Drawing.Color.Blue;
             this.tbSearch.LineIdleColor = System.Drawing.Color.Gray;
@@ -111,18 +86,20 @@ namespace ProjectAkhir_Kel02.Forms
             this.tbSearch.Size = new System.Drawing.Size(315, 27);
             this.tbSearch.TabIndex = 174;
             this.tbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearch_KeyPress);
             // 
             // dsRuangan
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dsRuangan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dsRuangan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dsRuangan.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dsRuangan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dsRuangan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -130,23 +107,28 @@ namespace ProjectAkhir_Kel02.Forms
             this.dsRuangan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dsRuangan.DoubleBuffered = true;
             this.dsRuangan.EnableHeadersVisualStyles = false;
-            this.dsRuangan.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dsRuangan.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dsRuangan.Location = new System.Drawing.Point(430, 149);
+            this.dsRuangan.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.dsRuangan.HeaderForeColor = System.Drawing.Color.White;
+            this.dsRuangan.Location = new System.Drawing.Point(430, 541);
             this.dsRuangan.Name = "dsRuangan";
             this.dsRuangan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dsRuangan.Size = new System.Drawing.Size(617, 496);
+            this.dsRuangan.Size = new System.Drawing.Size(617, 104);
             this.dsRuangan.TabIndex = 169;
+            this.dsRuangan.Visible = false;
+            this.dsRuangan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsRuangan_CellClick);
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Black;
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(31, 56);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(144, 20);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(133, 20);
             this.bunifuCustomLabel2.TabIndex = 167;
-            this.bunifuCustomLabel2.Text = "Deskripsi Ruangan";
+            this.bunifuCustomLabel2.Text = "Nama Ruangan";
+            this.bunifuCustomLabel2.Click += new System.EventHandler(this.bunifuCustomLabel2_Click);
             // 
             // btnSearch
             // 
@@ -160,6 +142,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnSearch.Size = new System.Drawing.Size(32, 32);
             this.btnSearch.TabIndex = 175;
             this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnEdit
             // 
@@ -183,7 +166,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnEdit.IconVisible = true;
             this.btnEdit.IconZoom = 90D;
             this.btnEdit.IsTab = false;
-            this.btnEdit.Location = new System.Drawing.Point(221, 349);
+            this.btnEdit.Location = new System.Drawing.Point(220, 238);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnEdit.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -195,6 +178,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Textcolor = System.Drawing.Color.White;
             this.btnEdit.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnBatal
             // 
@@ -218,7 +202,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnBatal.IconVisible = true;
             this.btnBatal.IconZoom = 90D;
             this.btnBatal.IsTab = false;
-            this.btnBatal.Location = new System.Drawing.Point(221, 394);
+            this.btnBatal.Location = new System.Drawing.Point(220, 283);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Normalcolor = System.Drawing.Color.DarkViolet;
             this.btnBatal.OnHovercolor = System.Drawing.Color.MediumOrchid;
@@ -230,6 +214,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBatal.Textcolor = System.Drawing.Color.White;
             this.btnBatal.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
             // btnHapus
             // 
@@ -253,7 +238,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnHapus.IconVisible = true;
             this.btnHapus.IconZoom = 90D;
             this.btnHapus.IsTab = false;
-            this.btnHapus.Location = new System.Drawing.Point(36, 394);
+            this.btnHapus.Location = new System.Drawing.Point(35, 283);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Normalcolor = System.Drawing.Color.Red;
             this.btnHapus.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -265,6 +250,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHapus.Textcolor = System.Drawing.Color.White;
             this.btnHapus.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnSimpan
             // 
@@ -288,7 +274,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnSimpan.IconVisible = true;
             this.btnSimpan.IconZoom = 90D;
             this.btnSimpan.IsTab = false;
-            this.btnSimpan.Location = new System.Drawing.Point(36, 349);
+            this.btnSimpan.Location = new System.Drawing.Point(35, 238);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Normalcolor = System.Drawing.Color.ForestGreen;
             this.btnSimpan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -300,14 +286,135 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSimpan.Textcolor = System.Drawing.Color.White;
             this.btnSimpan.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
+            // 
+            // tbNamaRuangan
+            // 
+            this.tbNamaRuangan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNamaRuangan.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbNamaRuangan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbNamaRuangan.HintForeColor = System.Drawing.Color.Empty;
+            this.tbNamaRuangan.HintText = "Masukkan Nama Ruangan";
+            this.tbNamaRuangan.isPassword = false;
+            this.tbNamaRuangan.LineFocusedColor = System.Drawing.Color.Blue;
+            this.tbNamaRuangan.LineIdleColor = System.Drawing.Color.Gray;
+            this.tbNamaRuangan.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.tbNamaRuangan.LineThickness = 3;
+            this.tbNamaRuangan.Location = new System.Drawing.Point(36, 84);
+            this.tbNamaRuangan.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNamaRuangan.Name = "tbNamaRuangan";
+            this.tbNamaRuangan.Size = new System.Drawing.Size(315, 27);
+            this.tbNamaRuangan.TabIndex = 182;
+            this.tbNamaRuangan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(33, 172);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 18);
+            this.label1.TabIndex = 231;
+            this.label1.Text = "Rp.";
+            // 
+            // tbHargaRuangan
+            // 
+            this.tbHargaRuangan.Location = new System.Drawing.Point(66, 173);
+            this.tbHargaRuangan.Name = "tbHargaRuangan";
+            this.tbHargaRuangan.Size = new System.Drawing.Size(285, 20);
+            this.tbHargaRuangan.TabIndex = 230;
+            this.tbHargaRuangan.Text = "Masukkan Harga Ruangan";
+            this.tbHargaRuangan.TextChanged += new System.EventHandler(this.tbHargaRuangan_TextChanged);
+            this.tbHargaRuangan.Enter += new System.EventHandler(this.tbHargaRuangan_Enter);
+            this.tbHargaRuangan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHargaRuangan_KeyPress_1);
+            this.tbHargaRuangan.Leave += new System.EventHandler(this.tbHargaRuangan_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(426, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 20);
+            this.label2.TabIndex = 241;
+            this.label2.Text = "Daftar Ruangan";
+            // 
+            // lblPageNumber
+            // 
+            this.lblPageNumber.AutoSize = true;
+            this.lblPageNumber.ForeColor = System.Drawing.Color.Black;
+            this.lblPageNumber.Location = new System.Drawing.Point(701, 345);
+            this.lblPageNumber.Name = "lblPageNumber";
+            this.lblPageNumber.Size = new System.Drawing.Size(35, 13);
+            this.lblPageNumber.TabIndex = 261;
+            this.lblPageNumber.Text = "label1";
+            // 
+            // btnNext
+            // 
+            this.btnNext.ForeColor = System.Drawing.Color.Black;
+            this.btnNext.Location = new System.Drawing.Point(945, 340);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 260;
+            this.btnNext.Text = ">";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.ForeColor = System.Drawing.Color.Black;
+            this.btnPrevious.Location = new System.Drawing.Point(430, 340);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
+            this.btnPrevious.TabIndex = 259;
+            this.btnPrevious.Text = "<";
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // cobaDGRuangan
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cobaDGRuangan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.cobaDGRuangan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cobaDGRuangan.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.cobaDGRuangan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cobaDGRuangan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cobaDGRuangan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.cobaDGRuangan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cobaDGRuangan.DoubleBuffered = true;
+            this.cobaDGRuangan.EnableHeadersVisualStyles = false;
+            this.cobaDGRuangan.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.cobaDGRuangan.HeaderForeColor = System.Drawing.Color.White;
+            this.cobaDGRuangan.Location = new System.Drawing.Point(430, 164);
+            this.cobaDGRuangan.Name = "cobaDGRuangan";
+            this.cobaDGRuangan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.cobaDGRuangan.Size = new System.Drawing.Size(590, 158);
+            this.cobaDGRuangan.TabIndex = 258;
+            this.cobaDGRuangan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cobaDGRuangan_CellClick);
             // 
             // FormRuangan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1079, 700);
+            this.Controls.Add(this.lblPageNumber);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPrevious);
+            this.Controls.Add(this.cobaDGRuangan);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tbHargaRuangan);
-            this.Controls.Add(this.tbDeskripsiRuangan);
+            this.Controls.Add(this.tbNamaRuangan);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbSearch);
@@ -319,17 +426,16 @@ namespace ProjectAkhir_Kel02.Forms
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Name = "FormRuangan";
             this.Text = "Master Ruangan";
+            this.Load += new System.EventHandler(this.FormRuangan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsRuangan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cobaDGRuangan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private ns1.BunifuMaterialTextbox tbHargaRuangan;
-        private ns1.BunifuMetroTextbox tbDeskripsiRuangan;
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
         private FontAwesome.Sharp.IconPictureBox btnSearch;
         private ns1.BunifuMaterialTextbox tbSearch;
@@ -339,5 +445,13 @@ namespace ProjectAkhir_Kel02.Forms
         private ns1.BunifuFlatButton btnSimpan;
         private ns1.BunifuCustomDataGrid dsRuangan;
         private ns1.BunifuCustomLabel bunifuCustomLabel2;
+        private ns1.BunifuMaterialTextbox tbNamaRuangan;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbHargaRuangan;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPageNumber;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrevious;
+        private ns1.BunifuCustomDataGrid cobaDGRuangan;
     }
 }

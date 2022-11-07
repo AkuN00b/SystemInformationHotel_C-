@@ -29,20 +29,29 @@ namespace ProjectAkhir_Kel02.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRole));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbSearch = new ns1.BunifuMaterialTextbox();
-            this.dsRole = new ns1.BunifuCustomDataGrid();
             this.tbNamaRole = new ns1.BunifuMaterialTextbox();
-            this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.btnSearch = new FontAwesome.Sharp.IconPictureBox();
             this.btnEdit = new ns1.BunifuFlatButton();
             this.btnBatal = new ns1.BunifuFlatButton();
             this.btnHapus = new ns1.BunifuFlatButton();
             this.btnSimpan = new ns1.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dsRole)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cobaDGRole = new ns1.BunifuCustomDataGrid();
+            this.lblPageNumber = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.dsRole = new ns1.BunifuCustomDataGrid();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cobaDGRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsRole)).BeginInit();
             this.SuspendLayout();
             // 
             // tbSearch
@@ -51,7 +60,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.tbSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.tbSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbSearch.HintForeColor = System.Drawing.Color.Empty;
-            this.tbSearch.HintText = "";
+            this.tbSearch.HintText = "Masukkan Kata Kunci";
             this.tbSearch.isPassword = false;
             this.tbSearch.LineFocusedColor = System.Drawing.Color.Blue;
             this.tbSearch.LineIdleColor = System.Drawing.Color.Gray;
@@ -63,32 +72,10 @@ namespace ProjectAkhir_Kel02.Forms
             this.tbSearch.Size = new System.Drawing.Size(315, 27);
             this.tbSearch.TabIndex = 108;
             this.tbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // dsRole
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dsRole.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dsRole.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dsRole.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dsRole.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dsRole.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dsRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dsRole.DoubleBuffered = true;
-            this.dsRole.EnableHeadersVisualStyles = false;
-            this.dsRole.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dsRole.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dsRole.Location = new System.Drawing.Point(430, 149);
-            this.dsRole.Name = "dsRole";
-            this.dsRole.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dsRole.Size = new System.Drawing.Size(617, 496);
-            this.dsRole.TabIndex = 103;
+            this.tbSearch.OnValueChanged += new System.EventHandler(this.tbSearch_OnValueChanged);
+            this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
+            this.tbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearch_KeyPress);
+            this.tbSearch.Leave += new System.EventHandler(this.tbSearch_Leave);
             // 
             // tbNamaRole
             // 
@@ -96,7 +83,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.tbNamaRole.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.tbNamaRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbNamaRole.HintForeColor = System.Drawing.Color.Empty;
-            this.tbNamaRole.HintText = "";
+            this.tbNamaRole.HintText = "Masukkan Nama Role";
             this.tbNamaRole.isPassword = false;
             this.tbNamaRole.LineFocusedColor = System.Drawing.Color.Blue;
             this.tbNamaRole.LineIdleColor = System.Drawing.Color.Gray;
@@ -108,16 +95,9 @@ namespace ProjectAkhir_Kel02.Forms
             this.tbNamaRole.Size = new System.Drawing.Size(315, 27);
             this.tbNamaRole.TabIndex = 96;
             this.tbNamaRole.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(31, 56);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(88, 20);
-            this.bunifuCustomLabel2.TabIndex = 95;
-            this.bunifuCustomLabel2.Text = "Nama Role";
+            this.tbNamaRole.Enter += new System.EventHandler(this.tbNamaRole_Enter);
+            this.tbNamaRole.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNamaRole_KeyPress);
+            this.tbNamaRole.Leave += new System.EventHandler(this.tbNamaRole_Leave);
             // 
             // btnSearch
             // 
@@ -131,6 +111,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnSearch.Size = new System.Drawing.Size(32, 32);
             this.btnSearch.TabIndex = 109;
             this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnEdit
             // 
@@ -166,6 +147,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Textcolor = System.Drawing.Color.White;
             this.btnEdit.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnBatal
             // 
@@ -201,6 +183,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBatal.Textcolor = System.Drawing.Color.White;
             this.btnBatal.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
             // btnHapus
             // 
@@ -236,6 +219,7 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHapus.Textcolor = System.Drawing.Color.White;
             this.btnHapus.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnSimpan
             // 
@@ -271,26 +255,158 @@ namespace ProjectAkhir_Kel02.Forms
             this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSimpan.Textcolor = System.Drawing.Color.White;
             this.btnSimpan.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.TabIndex = 110;
+            this.label1.Text = "Nama Role";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(32, 49);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(97, 20);
+            this.bunifuCustomLabel2.TabIndex = 168;
+            this.bunifuCustomLabel2.Text = "Nama Role";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(426, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 20);
+            this.label2.TabIndex = 241;
+            this.label2.Text = "Daftar Role";
+            // 
+            // cobaDGRole
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cobaDGRole.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.cobaDGRole.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cobaDGRole.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.cobaDGRole.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cobaDGRole.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cobaDGRole.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.cobaDGRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cobaDGRole.DoubleBuffered = true;
+            this.cobaDGRole.EnableHeadersVisualStyles = false;
+            this.cobaDGRole.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.cobaDGRole.HeaderForeColor = System.Drawing.Color.White;
+            this.cobaDGRole.Location = new System.Drawing.Point(430, 165);
+            this.cobaDGRole.Name = "cobaDGRole";
+            this.cobaDGRole.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.cobaDGRole.Size = new System.Drawing.Size(591, 113);
+            this.cobaDGRole.TabIndex = 242;
+            this.cobaDGRole.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cobaDGRole_CellClick);
+            this.cobaDGRole.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
+            // 
+            // lblPageNumber
+            // 
+            this.lblPageNumber.AutoSize = true;
+            this.lblPageNumber.ForeColor = System.Drawing.Color.Black;
+            this.lblPageNumber.Location = new System.Drawing.Point(708, 345);
+            this.lblPageNumber.Name = "lblPageNumber";
+            this.lblPageNumber.Size = new System.Drawing.Size(35, 13);
+            this.lblPageNumber.TabIndex = 245;
+            this.lblPageNumber.Text = "label1";
+            // 
+            // btnNext
+            // 
+            this.btnNext.ForeColor = System.Drawing.Color.Black;
+            this.btnNext.Location = new System.Drawing.Point(946, 340);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 244;
+            this.btnNext.Text = ">";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.ForeColor = System.Drawing.Color.Black;
+            this.btnPrevious.Location = new System.Drawing.Point(430, 340);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
+            this.btnPrevious.TabIndex = 243;
+            this.btnPrevious.Text = "<";
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // dsRole
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dsRole.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dsRole.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dsRole.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dsRole.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dsRole.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dsRole.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dsRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dsRole.DoubleBuffered = true;
+            this.dsRole.EnableHeadersVisualStyles = false;
+            this.dsRole.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.dsRole.HeaderForeColor = System.Drawing.Color.White;
+            this.dsRole.Location = new System.Drawing.Point(295, 410);
+            this.dsRole.Name = "dsRole";
+            this.dsRole.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dsRole.Size = new System.Drawing.Size(591, 113);
+            this.dsRole.TabIndex = 246;
+            this.dsRole.Visible = false;
             // 
             // FormRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1079, 700);
+            this.Controls.Add(this.dsRole);
+            this.Controls.Add(this.lblPageNumber);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPrevious);
+            this.Controls.Add(this.cobaDGRole);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.bunifuCustomLabel2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnSimpan);
-            this.Controls.Add(this.dsRole);
             this.Controls.Add(this.tbNamaRole);
-            this.Controls.Add(this.bunifuCustomLabel2);
             this.Name = "FormRole";
             this.Text = "Master Role";
             this.Load += new System.EventHandler(this.FormRole_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsRole)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cobaDGRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsRole)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,8 +419,14 @@ namespace ProjectAkhir_Kel02.Forms
         private ns1.BunifuFlatButton btnBatal;
         private ns1.BunifuFlatButton btnHapus;
         private ns1.BunifuFlatButton btnSimpan;
-        private ns1.BunifuCustomDataGrid dsRole;
         private ns1.BunifuMaterialTextbox tbNamaRole;
+        private System.Windows.Forms.Label label1;
         private ns1.BunifuCustomLabel bunifuCustomLabel2;
+        private System.Windows.Forms.Label label2;
+        private ns1.BunifuCustomDataGrid cobaDGRole;
+        private System.Windows.Forms.Label lblPageNumber;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrevious;
+        private ns1.BunifuCustomDataGrid dsRole;
     }
 }

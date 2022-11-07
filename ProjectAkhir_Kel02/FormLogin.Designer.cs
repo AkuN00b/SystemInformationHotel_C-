@@ -43,7 +43,6 @@ namespace ProjectAkhir_Kel02
             this.btnLogin = new ns1.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.btnExit = new ns1.BunifuThinButton2();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -53,9 +52,9 @@ namespace ProjectAkhir_Kel02
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Constantia", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(-2, -1);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(341, 36);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(305, 36);
             this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "System Information Hotel";
+            this.bunifuCustomLabel1.Text = "Sistem Informasi Hotel";
             this.bunifuCustomLabel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bunifuCustomLabel1_MouseDown);
             // 
             // bunifuCustomLabel2
@@ -88,6 +87,7 @@ namespace ProjectAkhir_Kel02
             this.tbEmail.TabIndex = 6;
             this.tbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbEmail.OnValueChanged += new System.EventHandler(this.tbUsername_OnValueChanged);
+            this.tbEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbEmail_KeyDown);
             // 
             // tbPassword
             // 
@@ -108,6 +108,8 @@ namespace ProjectAkhir_Kel02
             this.tbPassword.TabIndex = 8;
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbPassword.OnValueChanged += new System.EventHandler(this.tbPassword_OnValueChanged);
+            this.tbPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPassword_KeyDown);
+            this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPassword_KeyPress);
             // 
             // bunifuCustomLabel3
             // 
@@ -122,7 +124,7 @@ namespace ProjectAkhir_Kel02
             // 
             // bunifuCheckbox1
             // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.bunifuCheckbox1.Checked = false;
             this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
@@ -142,6 +144,7 @@ namespace ProjectAkhir_Kel02
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(49, 16);
             this.bunifuCustomLabel4.TabIndex = 12;
             this.bunifuCustomLabel4.Text = "Visible";
+            this.bunifuCustomLabel4.Click += new System.EventHandler(this.bunifuCustomLabel4_Click);
             // 
             // bunifuCustomLabel5
             // 
@@ -166,20 +169,20 @@ namespace ProjectAkhir_Kel02
             // 
             this.btnClear.ActiveBorderThickness = 1;
             this.btnClear.ActiveCornerRadius = 20;
-            this.btnClear.ActiveFillColor = System.Drawing.Color.Chartreuse;
+            this.btnClear.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnClear.ActiveForecolor = System.Drawing.Color.White;
-            this.btnClear.ActiveLineColor = System.Drawing.Color.Chartreuse;
+            this.btnClear.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.btnClear.BackColor = System.Drawing.SystemColors.Control;
             this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
-            this.btnClear.ButtonText = "Clear";
+            this.btnClear.ButtonText = "Bersihkan";
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.Chartreuse;
+            this.btnClear.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnClear.IdleBorderThickness = 1;
             this.btnClear.IdleCornerRadius = 20;
             this.btnClear.IdleFillColor = System.Drawing.Color.White;
-            this.btnClear.IdleForecolor = System.Drawing.Color.Chartreuse;
-            this.btnClear.IdleLineColor = System.Drawing.Color.Chartreuse;
+            this.btnClear.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnClear.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.btnClear.Location = new System.Drawing.Point(357, 246);
             this.btnClear.Margin = new System.Windows.Forms.Padding(5);
             this.btnClear.Name = "btnClear";
@@ -197,7 +200,7 @@ namespace ProjectAkhir_Kel02
             this.btnLogin.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
             this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
-            this.btnLogin.ButtonText = "Login";
+            this.btnLogin.ButtonText = "Masuk";
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.SeaGreen;
@@ -238,39 +241,12 @@ namespace ProjectAkhir_Kel02
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // btnExit
-            // 
-            this.btnExit.ActiveBorderThickness = 1;
-            this.btnExit.ActiveCornerRadius = 20;
-            this.btnExit.ActiveFillColor = System.Drawing.Color.DarkBlue;
-            this.btnExit.ActiveForecolor = System.Drawing.Color.White;
-            this.btnExit.ActiveLineColor = System.Drawing.Color.DarkBlue;
-            this.btnExit.BackColor = System.Drawing.SystemColors.Control;
-            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
-            this.btnExit.ButtonText = "Exit";
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnExit.IdleBorderThickness = 1;
-            this.btnExit.IdleCornerRadius = 20;
-            this.btnExit.IdleFillColor = System.Drawing.Color.White;
-            this.btnExit.IdleForecolor = System.Drawing.Color.DarkBlue;
-            this.btnExit.IdleLineColor = System.Drawing.Color.DarkBlue;
-            this.btnExit.Location = new System.Drawing.Point(240, 246);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(5);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(99, 32);
-            this.btnExit.TabIndex = 96;
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnExit.Click += new System.EventHandler(this.bunifuThinButton23_Click);
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(604, 309);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.bunifuCustomLabel5);
@@ -288,6 +264,7 @@ namespace ProjectAkhir_Kel02
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
             this.Opacity = 0.9D;
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SIHotel";
             this.Load += new System.EventHandler(this.FormLogin_Load);
@@ -312,6 +289,5 @@ namespace ProjectAkhir_Kel02
         private ns1.BunifuCustomLabel bunifuCustomLabel5;
         private ns1.BunifuThinButton2 btnClear;
         private System.Windows.Forms.Panel panel2;
-        private ns1.BunifuThinButton2 btnExit;
     }
 }

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RuanganModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="ReportRuangan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dari" Type="date" Mode="In" />
+          <Parameter Name="sampai" Type="date" Mode="In" />
+        </Function>
+        <EntityContainer Name="RuanganModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RuanganModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SI_HotelEntities13" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="ReportRuangan" ReturnType="Collection(RuanganModel.ReportRuangan_Result)">
+            <Parameter Name="dari" Mode="In" Type="DateTime" />
+            <Parameter Name="sampai" Mode="In" Type="DateTime" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="ReportRuangan_Result">
+          <Property Type="String" Name="id_tr_ruangan" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Nama_Customer" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nama_Resepsionis" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="id_ruangan" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="deskripsi_ruangan" Nullable="false" MaxLength="Max" />
+          <Property Type="DateTime" Name="tgl_transaksi" Nullable="false" />
+          <Property Type="DateTime" Name="checkin" Nullable="false" />
+          <Property Type="DateTime" Name="checkout" Nullable="false" />
+          <Property Type="Decimal" Name="total_harga" Nullable="false" Precision="19" />
+          <Property Type="String" Name="status" Nullable="false" MaxLength="9" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RuanganModelStoreContainer" CdmEntityContainer="SI_HotelEntities13" >
+          <FunctionImportMapping FunctionImportName="ReportRuangan" FunctionName="RuanganModel.Store.ReportRuangan">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RuanganModel.ReportRuangan_Result">
+                <ScalarProperty Name="id_tr_ruangan" ColumnName="id_tr_ruangan" />
+                <ScalarProperty Name="Nama_Customer" ColumnName="Nama Customer" />
+                <ScalarProperty Name="Nama_Resepsionis" ColumnName="Nama Resepsionis" />
+                <ScalarProperty Name="id_ruangan" ColumnName="id_ruangan" />
+                <ScalarProperty Name="deskripsi_ruangan" ColumnName="deskripsi_ruangan" />
+                <ScalarProperty Name="tgl_transaksi" ColumnName="tgl_transaksi" />
+                <ScalarProperty Name="checkin" ColumnName="checkin" />
+                <ScalarProperty Name="checkout" ColumnName="checkout" />
+                <ScalarProperty Name="total_harga" ColumnName="total_harga" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
